@@ -5,7 +5,6 @@ let todos: TodoItem[] = [
  new TodoItem(3, "Collect Tickets"), new TodoItem(4, "Call Joe", true)];
 let collection: TodoCollection = new TodoCollection("Adam", todos);
 console.clear();
-console.log(`${collection.userName}'s Todo List`);
-//collection.addTodo(todoItem);
-collection.removeComplete();
+console.log(`${collection.userName}'s Todo List `
+ + `(${ collection.getItemCounts().incomplete } items to do)`);
 collection.getTodoItems(true).forEach(item => item.printDetails());
